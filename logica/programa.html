@@ -1,13 +1,47 @@
 <meta charset="UTF-8">
 <script>
-
-	document.write("Leo nasceu em: <br/>");
-	document.write(2022 - 28);
+	
+	/*document.write("Leo nasceu em: <br/>");
+	document.write(ano - 28);
 	document.write("<br/>");
 	alert("Leo tem 28 anos");
 	document.write("Media das idades é: ");
 	document.write("<br/>");
 	document.write((27 + 35 + 15)/3 + "<br/>");
-	document.write("A media das idades é " + (20 + 10 + 30)/3)
+	document.write("A media das idades é " + (20 + 10 + 30)/3)*/
+
+	function pulaLinha() {
+		let linhaPulada = "<br/><br/>"
+		document.write(linhaPulada);
+	}
+
+	function mostra(frase){
+
+		document.write(frase);
+		pulaLinha();
+
+	}
+
+	var ano = 2022;
+
+	var idadeFlavio = 39;
+	var idadeJoaquim = 20;
+	var idadeBarney = 41;
+
+	var nome = "Flávio";
+
+	var media = (idadeFlavio + idadeJoaquim + idadeBarney ) /3;
+
+	mostra("Flávio tem " + (ano - 1977) + " anos");
+	
+	mostra("Joaquim tem " + (ano - 1996) + " anos");
+
+	ano = 2023;
+
+	mostra("Barney tem " + (ano - 1976) + " anos");
+
+	mostra(`a média das idades é ${Math.round(media)}`)
+
+	mostra(`A idade de ${nome} é ${idadeFlavio}`);
 
 </script>

@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	var anoAtual = 2022;
+	var descoberta = 1500;
+	var idadeFamiliar = 28;
+
+	var geracoes = (anoAtual - descoberta) / idadeFamiliar;
+
+	function pularLinha() {
+		document.write("<br/>");
+	}
+
+	function titulo(titulo){
+		document.write(titulo);
+		pularLinha();
+	}
+
+	function mostra(frase){
+		document.write(`<p>Já se passaram ${Math.round(frase)} gerações</p>`)
+		pularLinha();
+	}
+
+	titulo("<h1>Descupra aqui quantas gerações já se passaram no Brasil.</h1>")
+
+	mostra(geracoes);
+
+</script>

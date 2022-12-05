@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+	var carlos = 18;
+	var ana = 15;
+	var resultado = carlos - ana;
+
+	function pulaLinha(){
+		document.write("<br/>");
+	}
+
+	function mostra(resultado){
+		alert(`a diferença de idade é ${resultado}`);
+		document.write("<h1>Calculadora de idade</h1>");
+		pulaLinha();
+		document.write(`Carlos tem ${carlos} e Ana tem ${ana}`)
+		pulaLinha();
+		document.write(`A diferença das idades é ${resultado}`)
+	}
+
+	mostra(resultado);
+
+</script>
