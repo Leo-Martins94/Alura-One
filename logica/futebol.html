@@ -12,12 +12,26 @@
 		pulaLinha();
 	}
 
+	function comparando(classificacao, classificacaoPass){
+		if (classificacao > classificacaoPass) {
+			mostra(`Seu time está melhor que ano passado em ${classificacao - classificacaoPass} pontos`);
+		} else if (classificacao == classificacaoPass){
+			mostra(`Seu time está igual ao ano passado com ${classificacao} pontos`);
+		}else{
+			mostra(`Seu time está pior que o ano passado em ${classificacao - classificacaoPass} pontoss`);
+		}
+	}
+
 	var vitorias = parseInt(prompt("Digite o número de vitorias do seu time: "));
 	var empates = parseInt(prompt("Digite o número de empates do seu time: "));
 	var derrotas = parseInt(prompt("Digite o número de derrotas do seu time: "));
 
 	var pontos = vitorias * 3 + empates;
+	const pontosPass = 28;
 
-	mostra(`Seu time marcou ${pontos} pontos`)
+	mostra(`Seu time até agora marcor ${pontos}`)
+	comparando(pontos, pontosPass);
+
+	
 
 </script>

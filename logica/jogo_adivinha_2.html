@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function pulaLinha(){
+		document.write("<br/>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function sorteia(n){
+		let numero = Math.round(Math.random()*n);
+		return numero;
+	}
+
+	function verificando(chute, numeroPensando){
+		if(chute == numeroPensando){
+			mostra(`Uau! Você acertou, pois eu pensei no ${numeroPensando} `);
+		} else if(chute > numeroPensando){
+			mostra(`Uma pena... você errou, eu pensei em um numero menor`);
+			mostra(`Pensei em ${numeroPensando}`);
+		} else{
+			mostra(`Uma pena... você errou, eu pensei em um numero maior`);
+			mostra(`Pensei em ${numeroPensando}`);
+		}
+	}
+
+	var numeroPensando = sorteia(10);
+	var chute = parseInt(prompt("Já pensei. Qual número você acha que é?"));
+
+	console.log(numeroPensando);
+
+	verificando(chute, numeroPensando);
+
+
+</script>
