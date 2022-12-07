@@ -13,14 +13,23 @@
 	}
 
 	var numeroPensado = Math.round(Math.random() * 10);
+	//console.log(numeroPensado);
 
-	var chute = parseInt(prompt("Digite seu chute: "));
+	var tentativas = 1;
+	var maxTentativas = 3;
 
-	if(chute == numeroPensado){
-		mostra("Parabéns você acertou !!!");
-		mostra(`O número pensado foi #{numeroPensado}`)
-	}else{
-		mostra(`você errou, o numero pensado foi ${numeroPensado}. tente novamente...`);
+	while(tentativas <= maxTentativas){
+		var chute = parseInt(prompt("Digite seu chute: "));
+
+		if(chute == numeroPensado){
+			mostra("Parabéns você acertou !!!");
+			mostra(`O número pensado foi ${numeroPensado}`)
+			break;
+		}else{
+			mostra(`você errou, tente novamente...`);
+		}
+
+		tentativas++;
 	}
 
 </script>

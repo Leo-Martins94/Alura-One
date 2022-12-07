@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var tenativa = 1;
+    var maximoTentativas = 3;
+
+    while(tenativa <= maximoTentativas){
+
+            var loginInformado = prompt("Informe seu login");
+            var senhaInformada = prompt("Informe sua senha");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+            alert("Bem-vindo ao sistema " + loginInformado);
+
+            tenativa = maximoTentativas;
+
+        } else if(tenativa == maximoTentativas){
+            alert("Você atingiu o numero maximo de tantativas, contate o administrador");
+        } else {
+
+            alert("Login inválido. Tente novamente");
+
+
+        }   
+        tenativa ++;     
+    }
+
+</script>

@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pularLinha(){
+		document.write("<br/>");
+		document.write("<br/>");
+	}
+
+	function mostra(frase){
+		document.write(`<p>${frase}</p>`);
+		pularLinha();
+	}
+
+	var tabuada = 5;
+	
+
+	for(var multiplicador = 1; multiplicador <= 10; multiplicador++ ){
+		var resultado = tabuada * multiplicador;
+
+		mostra(`${tabuada} X ${multiplicador} = ${resultado}`);
+
+	}
+
+
+</script>

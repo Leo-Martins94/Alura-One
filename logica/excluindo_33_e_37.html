@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+	function pularLinha(){
+		document.write("<br/>");
+		document.write("<hr/>");
+	}
+
+	function mostra(frase){
+		document.write(`<p>${frase}</p>`);
+		pularLinha();
+	}
+
+	var inicio = 30;
+	var fim = 40;
+
+	while(inicio <= fim){
+		if(inicio == 33 || inicio == 37){
+			inicio++;
+		}else{
+			mostra(inicio);
+			inicio++
+		}
+	}
+
+	mostra(`Fim`)
+
+</script>
