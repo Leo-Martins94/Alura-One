@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<main style="display: flex; justify-content: space-around;">
+
+	<canvas width="600" height="600" style=" margin-top:20px; background-image: radial-gradient(circle at 9.37% 15.91%, #e4b332 0, #d7b930 8.33%, #c9bd32 16.67%, #bbc236 25%, #abc53d 33.33%, #9bc946 41.67%, #8acc50 50%, #77cf5c 58.33%, #61d168 66.67%, #45d376 75%, #08d584 83.33%, #00d693 91.67%, #00d7a2 100%);">
+	</canvas>
+	
+</main>
+
+<script>
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	//cabeça
+	pincel.fillStyle='darkgreen';
+	pincel.fillRect(115,150, 350, 300);
+
+	//olhos
+	pincel.fillStyle = "black";
+	pincel.fillRect(178, 200, 90, 90);
+	pincel.fillRect(321, 200, 90, 90);
+
+	//nariz
+	pincel.fillStyle = "black";
+	pincel.fillRect(260,280, 70, 100);
+
+	//boca
+	pincel.fillStyle = "black";
+	pincel.fillRect(225,340, 40, 110);	
+	pincel.fillRect(315,340, 40, 110);		
+
+
+
+</script>
