@@ -1,0 +1,32 @@
+<main style="display: flex; justify-content: space-around;margin-top:1.5rem;">
+	<canvas width="600" height="400" style="background-color: #f4f4f4;"></canvas>
+</main>
+
+<script>
+	
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	function desenhaCirculo(x, y, raio){
+		pincel.fillStyle = 'blue';
+		pincel.beginPath();
+		pincel.arc(x , y , raio,0, 2*Math.PI);
+		pincel.fill();
+	}
+
+	function limpaTela(){
+		pincel.clearRect(0, 0, 600,400);
+	}
+
+	var x = 20;
+	function bolinhaAnimada(){
+		
+		limpaTela();
+		desenhaCirculo(x, 20, 10);
+		x++;
+	}
+
+	setInterval(bolinhaAnimada, 100);
+
+
+</script>
